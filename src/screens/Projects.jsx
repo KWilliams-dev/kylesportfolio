@@ -26,6 +26,34 @@ const lostResidence =
   "rooms, items, and monsters. Through careful data modeling, each game is unique to a users account. They can save, leave, and pick up right where they left" +
   "off.";
 
+const listOfAccomplishmentsQuicKart = [
+  "Implemented searchable dropdown menu that populated with grocery items (queried from MongoDB via GraphQL).", 
+  "Wrote code that sorted the users grocery list in order of proximity.",
+  "Implemented React-Redux into the project. I used this to update the users grocery list and time spent shopping.",
+  "Designed the architecture of the app.",
+  "Ensured my sprint tasks were completed on time."
+]
+
+const listOfAccomplishmentsSoftIQ = [
+  "Modeled the data and set up the schemas via GraphQL.", 
+  "Created the header and navigation using React Router and reuable components.",
+  "Assisted with UX design in figma, and designed the landing page for when the user is not logged in.",
+]
+
+const listOfAccomplishmentsLostResident = [
+  "Modeled the data for the database so that each user can save the state of their game and return to it upon logging in.", 
+  "Coded the logic that goes behind the player being able to pick up items and drop them into a different room.",
+  "Hard coded user authentication by taking in the user input for email and password and then querying the database to see if it finds a match between the pair.",
+  "Coded the logic that goes behind the user being able to traverse rooms. This is done by giving the user their current direction options that they can travel. Once selected, the direction has an associated roomID and that becomes the player's new current room ID (current location)."
+]
+
+const listOfAccomplishmentsClientRegistrar = [
+  "Learned how to write Java code that can connect to a database and execute queries based on user input via GUI. This was accomplished via JDBC.",
+  "Coded a front end using JavaFX that takes in user input and allows them to add a clients to a database, and also remove them.",
+  "Learned a lot about writing practical SQL queries that execute as a result of Java code instead of writing them out in the DB console.",
+  "Used Mockaroo to create a database consisting of a thousand unique clients that the user can querie from."
+]
+
 const quicKartTechnologies = ["JavaScript", "React", "GraphQL", "MongoDB"];
 const softIqTechnologies = ["JavaScript", "React", "GraphQL", "MongoDB"];
 const lostResidentTechnologies = ["Java", "SQL", "JDBC", "SQLite"];
@@ -41,6 +69,7 @@ export const Projects = () => {
           title="QuicKart"
           info={quicKartInfo}
           technologies={quicKartTechnologies}
+          listOfAccomplishments={listOfAccomplishmentsQuicKart}
         />
       </Fade>
       <Fade right>
@@ -49,6 +78,7 @@ export const Projects = () => {
           title="SoftIQ"
           info={softIqInfo}
           technologies={softIqTechnologies}
+          listOfAccomplishments={listOfAccomplishmentsSoftIQ}
         />
       </Fade>
       <Fade left>
@@ -57,6 +87,7 @@ export const Projects = () => {
           title="Lost Resident"
           info={lostResidence}
           technologies={lostResidentTechnologies}
+          listOfAccomplishments={listOfAccomplishmentsLostResident}
         />
       </Fade>
       <Fade right>
@@ -65,6 +96,7 @@ export const Projects = () => {
           title="Client Registrar"
           info={clientRegistrar}
           technologies={clientRegistrarTechnologies}
+          listOfAccomplishments={listOfAccomplishmentsClientRegistrar}
         />
       </Fade>
     </div>
