@@ -30,7 +30,7 @@ export const ContactModal = () => {
                     borderRadius: "4px",
                     backgroundColor: "#f1f1f1",
                 }} type="select" id="project" name="project">
-                    <option style={slectionInputStyle} value={"QuicKart"}><Typography>QuicKart</Typography></option>
+                    <option style={slectionInputStyle} value={"QuicKart"}>QuicKart</option>
                     <option style={slectionInputStyle} value={"SoftIQ"}><Typography>SoftIQ</Typography></option>
                     <option style={slectionInputStyle} value={"Lost Resident"}><Typography>Lost Resident</Typography></option>
                     <option style={slectionInputStyle} value={"Client Registrar"}><Typography>Client Registrar</Typography></option>
