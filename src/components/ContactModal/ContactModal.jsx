@@ -31,9 +31,9 @@ export const ContactModal = () => {
                     backgroundColor: "#f1f1f1",
                 }} type="select" id="project" name="project">
                     <option style={slectionInputStyle} value={"QuicKart"}>QuicKart</option>
-                    <option style={slectionInputStyle} value={"SoftIQ"}><Typography>SoftIQ</Typography></option>
-                    <option style={slectionInputStyle} value={"Lost Resident"}><Typography>Lost Resident</Typography></option>
-                    <option style={slectionInputStyle} value={"Client Registrar"}><Typography>Client Registrar</Typography></option>
+                    <option style={slectionInputStyle} value={"SoftIQ"}>SoftIQ</option>
+                    <option style={slectionInputStyle} value={"Lost Resident"}>Lost Resident</option>
+                    <option style={slectionInputStyle} value={"Client Registrar"}>Client Registrar</option>
                 </select>
                 <Button style={{marginTop: 20}} variant="outlined">Submit</Button>
             </form>
