@@ -4,7 +4,6 @@ import interview from "../assets/interview.jpg";
 import cart from "../assets/cart.jpg";
 import spooky from "../assets/spooky.jpg";
 import client from "../assets/client.jpg";
-import Fade from "react-reveal/Fade";
 
 const quicKartInfo =
   "This app was built by a team of 6 students as a project for a client during my Software Development 2 class at Georgia Gwinnett College. " +
@@ -63,7 +62,6 @@ const clientRegistrarTechnologies = ["Java", "JavaFX", "JDBC", "MySQL"];
 export const Projects = () => {
   return (
     <div style={{ height: "100%", width: "100%", marginBottom: 50 }}>
-      <Fade left>
         <ProjectPanel
           image={cart}
           title="QuicKart"
@@ -71,8 +69,6 @@ export const Projects = () => {
           technologies={quicKartTechnologies}
           listOfAccomplishments={listOfAccomplishmentsQuicKart}
         />
-      </Fade>
-      <Fade right>
         <ProjectPanel
           image={interview}
           title="SoftIQ"
@@ -80,8 +76,6 @@ export const Projects = () => {
           technologies={softIqTechnologies}
           listOfAccomplishments={listOfAccomplishmentsSoftIQ}
         />
-      </Fade>
-      <Fade left>
         <ProjectPanel
           image={spooky}
           title="Lost Resident"
@@ -89,8 +83,6 @@ export const Projects = () => {
           technologies={lostResidentTechnologies}
           listOfAccomplishments={listOfAccomplishmentsLostResident}
         />
-      </Fade>
-      <Fade right>
         <ProjectPanel
           image={client}
           title="Client Registrar"
@@ -98,7 +90,6 @@ export const Projects = () => {
           technologies={clientRegistrarTechnologies}
           listOfAccomplishments={listOfAccomplishmentsClientRegistrar}
         />
-      </Fade>
     </div>
   );
 };

@@ -1,10 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import Fade from "react-reveal/Fade";
 
 export const Home = () => {
   return (
     <div style={{ height: "100%", width: "100%", marginBottom: 350 }}>
-      <Fade>
         <Box
           sx={{
             display: "flex",
@@ -27,7 +25,6 @@ export const Home = () => {
             </Typography>
           </Box>
         </Box>
-      </Fade>
     </div>
   );
 };

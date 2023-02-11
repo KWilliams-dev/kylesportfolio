@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { LeftInfoBlock } from "../components/InfoBlock/LeftInfoBlock";
 import { RightInfoBlock } from "../components/InfoBlock/RightInfoBlock";
-import Fade from "react-reveal/Fade";
 
 const aspireInfo =
   "My professional goals are to graduate in August of 2023, and start my career as a Software Engineer imediately after." +
@@ -29,17 +28,11 @@ export const About = () => {
         marginBottom: 25
       }}
     >
-      <Fade left>
         <LeftInfoBlock title={"Aspirations"} info={aspireInfo} />
-      </Fade>
 
-      <Fade right>
         <RightInfoBlock title={"Technical Skills"} info={technicalSkillsInfo} />
-      </Fade>
 
-      <Fade left>
         <LeftInfoBlock title={"Soft Skills"} info={softSkillsInfo} />
-      </Fade>
     </Box>
   );
 };
