@@ -48,19 +48,20 @@ export const ProjectPanel = ({
             <Typography sx={{ marginTop: 1, marginBottom: 1 }} variant="h5">
               My Accomplishments On This Project
             </Typography>
-            {listOfAccomplishments && listOfAccomplishments.map((accomp) => {
-              return (
-                <ListItem>
-                  <ListItemText>
-                    {accomp}
-                  </ListItemText>
-                </ListItem>
-              );
-            })}
-            </List>
+            {listOfAccomplishments &&
+              listOfAccomplishments.map((accomp) => {
+                return (
+                  <ListItem>
+                    <ListItemText>{accomp}</ListItemText>
+                  </ListItem>
+                );
+              })}
+          </List>
         </CardContent>
         <CardActions>
-          <RequestCodeReviewButton />
+          <div style={{ marginLeft: 10 }}>
+            <RequestCodeReviewButton />
+          </div>
         </CardActions>
         <Stack
           sx={{ paddingLeft: 2, paddingBottom: 2, paddingTop: 2 }}

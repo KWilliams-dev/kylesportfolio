@@ -24,7 +24,7 @@
 }
 
 .card {
-    height: 400px;
+    height: 450px;
     width: 450px;
     min-width: 250px;
     padding: 1.5rem;
@@ -79,3 +79,9 @@
     display: inline-block;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 900px) {
+    .card {
+        height: 600px;
+    }
+  }

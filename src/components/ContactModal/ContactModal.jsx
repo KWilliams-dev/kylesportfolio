@@ -14,7 +14,7 @@ const slectionInputStyle = {
 export const ContactModal = () => {
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-            <form>
+            <form  name="contact" method="POST" data-netlify="true" >
                 <Typography variant="h4" style={{paddingBottom: 20}}>Want to get in touch?</Typography>
                 <label for="fname"><Typography>First Name</Typography></label>
                 <input style={textInputStyle} type="text" id="fname" name="fname" />

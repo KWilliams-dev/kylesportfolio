@@ -4,6 +4,7 @@ import interview from "../assets/interview.jpg";
 import cart from "../assets/cart.jpg";
 import spooky from "../assets/spooky.jpg";
 import client from "../assets/client.jpg";
+import { Fade } from "@mui/material";
 
 const quicKartInfo =
   "This app was built by a team of 6 students as a project for a client during my Software Development 2 class at Georgia Gwinnett College. " +
@@ -22,46 +23,46 @@ const clientRegistrar =
 
 const lostResidence =
   "This is a text based adventure game that uses Java, SQLite, and JDBC to allow a player to traverse a spooky mansion full of " +
-  "rooms, items, and monsters. Through careful data modeling, each game is unique to a users account. They can save, leave, and pick up right where they left" +
+  "rooms, items, and monsters. Through careful data modeling, each game is unique to a users account. They can save, leave, and pick up right where they left " +
   "off.";
 
 const listOfAccomplishmentsQuicKart = [
-  "Implemented searchable dropdown menu that populated with grocery items (queried from MongoDB via GraphQL).", 
+  "Implemented searchable dropdown menu that populated with grocery items (queried from MongoDB via GraphQL).",
   "Wrote code that sorted the users grocery list in order of proximity.",
   "Implemented React-Redux into the project. I used this to update the users grocery list and time spent shopping.",
   "Designed the architecture of the app.",
-  "Ensured my sprint tasks were completed on time."
-]
+  "Ensured my sprint tasks were completed on time.",
+];
 
 const listOfAccomplishmentsSoftIQ = [
-  "Modeled the data and set up the schemas via GraphQL.", 
+  "Modeled the data and set up the schemas via GraphQL.",
   "Created the header and navigation using React Router and reuable components.",
   "Assisted with UX design in figma, and designed the landing page for when the user is not logged in.",
-]
+];
 
 const listOfAccomplishmentsLostResident = [
-  "Modeled the data for the database so that each user can save the state of their game and return to it upon logging in.", 
+  "Modeled the data for the database so that each user can save the state of their game and return to it upon logging in.",
   "Coded the logic that goes behind the player being able to pick up items and drop them into a different room.",
   "Hard coded user authentication by taking in the user input for email and password and then querying the database to see if it finds a match between the pair.",
-  "Coded the logic that goes behind the user being able to traverse rooms. This is done by giving the user their current direction options that they can travel. Once selected, the direction has an associated roomID and that becomes the player's new current room ID (current location)."
-]
+  "Coded the logic that goes behind the user being able to traverse rooms. This is done by giving the user their current direction options that they can travel. Once selected, the direction has an associated roomID and that becomes the player's new current room ID (current location).",
+];
 
 const listOfAccomplishmentsClientRegistrar = [
-  "Learned how to write Java code that can connect to a database and execute queries based on user input via GUI. This was accomplished via JDBC.",
+  "Learned how to write Java code that can connect to a database and execute queries based on user input via a GUI. This was accomplished via JDBC.",
   "Coded a front end using JavaFX that takes in user input and allows them to add a clients to a database, and also remove them.",
   "Learned a lot about writing practical SQL queries that execute as a result of Java code instead of writing them out in the DB console.",
-  "Used Mockaroo to create a database consisting of a thousand unique clients that the user can querie from."
-]
+  "Used Mockaroo to create a database consisting of a thousand unique clients that the user can querie from.",
+];
 
 const quicKartTechnologies = ["JavaScript", "React", "GraphQL", "MongoDB"];
 const softIqTechnologies = ["JavaScript", "React", "GraphQL", "MongoDB"];
 const lostResidentTechnologies = ["Java", "SQL", "JDBC", "SQLite"];
 const clientRegistrarTechnologies = ["Java", "JavaFX", "JDBC", "MySQL"];
 
-
 export const Projects = () => {
   return (
     <div style={{ height: "100%", width: "100%", marginBottom: 50 }}>
+      <Fade>
         <ProjectPanel
           image={cart}
           title="QuicKart"
@@ -69,27 +70,28 @@ export const Projects = () => {
           technologies={quicKartTechnologies}
           listOfAccomplishments={listOfAccomplishmentsQuicKart}
         />
-        <ProjectPanel
-          image={interview}
-          title="SoftIQ"
-          info={softIqInfo}
-          technologies={softIqTechnologies}
-          listOfAccomplishments={listOfAccomplishmentsSoftIQ}
-        />
-        <ProjectPanel
-          image={spooky}
-          title="Lost Resident"
-          info={lostResidence}
-          technologies={lostResidentTechnologies}
-          listOfAccomplishments={listOfAccomplishmentsLostResident}
-        />
-        <ProjectPanel
-          image={client}
-          title="Client Registrar"
-          info={clientRegistrar}
-          technologies={clientRegistrarTechnologies}
-          listOfAccomplishments={listOfAccomplishmentsClientRegistrar}
-        />
+      </Fade>
+      <ProjectPanel
+        image={interview}
+        title="SoftIQ"
+        info={softIqInfo}
+        technologies={softIqTechnologies}
+        listOfAccomplishments={listOfAccomplishmentsSoftIQ}
+      />
+      <ProjectPanel
+        image={spooky}
+        title="Lost Resident"
+        info={lostResidence}
+        technologies={lostResidentTechnologies}
+        listOfAccomplishments={listOfAccomplishmentsLostResident}
+      />
+      <ProjectPanel
+        image={client}
+        title="Client Registrar"
+        info={clientRegistrar}
+        technologies={clientRegistrarTechnologies}
+        listOfAccomplishments={listOfAccomplishmentsClientRegistrar}
+      />
     </div>
   );
 };

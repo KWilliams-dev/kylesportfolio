@@ -10,13 +10,13 @@ import { ProjectCard } from "./components/ProjectCard/ProjectCard";
 import { Footer } from "./components/Footer/Footer";
 
 const quicKartInfo =
-  "This app  is meant to help users navigate a grocery store quicker. The app retrieves a mock inventory " +
-  "from a database and displays the selection of items to the user. They can then select their items and click start shopping " +
+  "This app  is meant to help users navigate a grocery store efficiently. The app retrieves a mock inventory " +
+  "from a database and displays the selection of items to the user. They can then select their items and click start shopping. " +
   "Once started, our app will run an algorithm that sorts the items in order of proximity from the entrance of the store.";
 
 const softIqInfo =
   "This apps goal is to help users sharpen their soft skills for interviews in tech. The user can select their " +
-  "aspiring job type and receive questions based on that position. Once the user has answered via recorded video, our app will detect improvements " +
+  "level of interview expertise and receive questions wihtin their level of skill. Once the user has answered via recorded video, our app will detect improvements " +
   "that could be made.";
 
 const clientRegistrar =
@@ -26,18 +26,12 @@ const clientRegistrar =
 
 const lostResidence =
   "This is a text based adventure game that uses Java, SQLite, and JDBC to allow a player to traverse a spooky mansion full of " +
-  "rooms, items, and monsters. Through careful data modeling, each game is unique to a users account. They can save, leave, and pick up right where they left" +
+  "rooms, items, and monsters. Through careful data modeling, each game is unique to a user's account. They can save, leave, and pick up right where they left" +
   "off.";
 
 function App() {
   return (
     <Container sx={{ minHeight: "100vh" }}>
-      <Typography
-        sx={{ display: "flex", justifyContent: "center", marginTop: 5 }}
-        variant="h2"
-      >
-        Kyle's Portfolio
-      </Typography>
       <Box>
         <Nav />
         <section className="card-list">
