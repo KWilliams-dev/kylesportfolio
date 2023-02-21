@@ -25,48 +25,51 @@ export const ContactModal = () => {
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
             Want to get in touch?
           </Typography>
-          <label for="fname">
+          <label>
             <Typography>First Name</Typography>
+
+            <input style={textInputStyle} type="text" name="FirstName" />
           </label>
-          <input style={textInputStyle} type="text" id="fname" name="contact" />
-          <label for="lname">
+          <label>
             <Typography>Last Name</Typography>
+
+            <input style={textInputStyle} type="text" name="LastName" />
           </label>
-          <input style={textInputStyle} type="text" id="lname" name="contact" />
-          <label for="lname">
+          <label>
             <Typography>Email</Typography>
+
+            <input style={textInputStyle} type="email" name="Email" />
           </label>
-          <input style={textInputStyle} type="text" id="lname" name="contact" />
           <label style={{ marginTop: 10 }} for="project">
             <Typography>
               Are you interested in learning more about one of the projects?
             </Typography>
+
+            <select
+              style={{
+                width: "100%",
+                padding: "16px 20px",
+                border: "none",
+                borderRadius: "4px",
+                backgroundColor: "#f1f1f1",
+              }}
+              type="select"
+              name="Project"
+            >
+              <option style={slectionInputStyle} value={"QuicKart"}>
+                QuicKart
+              </option>
+              <option style={slectionInputStyle} value={"SoftIQ"}>
+                SoftIQ
+              </option>
+              <option style={slectionInputStyle} value={"Lost Resident"}>
+                Lost Resident
+              </option>
+              <option style={slectionInputStyle} value={"Client Registrar"}>
+                Client Registrar
+              </option>
+            </select>
           </label>
-          <select
-            style={{
-              width: "100%",
-              padding: "16px 20px",
-              border: "none",
-              borderRadius: "4px",
-              backgroundColor: "#f1f1f1",
-            }}
-            type="select"
-            id="project"
-            name="contact"
-          >
-            <option style={slectionInputStyle} value={"QuicKart"}>
-              QuicKart
-            </option>
-            <option style={slectionInputStyle} value={"SoftIQ"}>
-              SoftIQ
-            </option>
-            <option style={slectionInputStyle} value={"Lost Resident"}>
-              Lost Resident
-            </option>
-            <option style={slectionInputStyle} value={"Client Registrar"}>
-              Client Registrar
-            </option>
-          </select>
           <button type="submit">
             {/* <Button
               onClick={handleSubmit}
