@@ -15,9 +15,9 @@ const slectionInputStyle = {
 export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (e) => {
     console.log("An form was submitted: ");
-    event.preventDefault();
+    e.preventDefault();
   };
 
   const handleClick = () => {
@@ -27,7 +27,13 @@ export const ContactModal = () => {
   return (
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {submit === false ? (
-        <form name="contact" netlify onSubmit={handleSubmit}>
+        <form
+          name="contact"
+          netlify
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
           <input type="hidden" name="form-name" value="contact v1" />
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
             Want to get in touch?
