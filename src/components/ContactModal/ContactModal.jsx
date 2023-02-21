@@ -67,14 +67,16 @@ export const ContactModal = () => {
               Client Registrar
             </option>
           </select>
-          <Button
-            onClick={handleSubmit}
-            style={{ marginTop: 20 }}
-            variant="outlined"
-            type="submit"
-          >
-            Submit
-          </Button>
+          <button type="submit">
+            <Button
+              onClick={handleSubmit}
+              style={{ marginTop: 20 }}
+              variant="outlined"
+              type="submit"
+            >
+              Submit
+            </Button>
+          </button>
         </form>
       ) : (
         <div style={{ width: "100%" }}>
