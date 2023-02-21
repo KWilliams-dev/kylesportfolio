@@ -13,7 +13,7 @@ const slectionInputStyle = {
 };
 
 const handleSubmit = (event) => {
-  alert("An essay was submitted: " + this.state.value);
+  alert("An essay was submitted: ");
   event.preventDefault();
 };
 
