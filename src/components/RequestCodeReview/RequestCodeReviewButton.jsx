@@ -16,7 +16,7 @@ export const style = {
   p: 4,
 };
 
-export const RequestCodeReviewButton = ({ header }) => {
+export const RequestCodeReviewButton = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -35,7 +35,7 @@ export const RequestCodeReviewButton = ({ header }) => {
             aria-describedby="modal-modal-description"
           >
             <Box sx={style}>
-              <ContactModal />
+              <ContactModal handleClose={handleClose} />
             </Box>
           </Modal>
         </div>
