@@ -25,7 +25,7 @@ export const ContactModal = () => {
           name="contact v1"
           method="POST"
           data-netlify="true"
-          onSubmit="submit"
+          onSubmit={"submit"}
         >
           <input type="hidden" name="form-name" value="contact v1" />
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
