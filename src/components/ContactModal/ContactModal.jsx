@@ -16,7 +16,7 @@ export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
 
   const handleSubmit = (event) => {
-    alert("An essay was submitted: ");
+    console.log("An form was submitted: ");
     event.preventDefault();
   };
 
@@ -27,12 +27,7 @@ export const ContactModal = () => {
   return (
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {submit === false ? (
-        <form
-          name="contact"
-          method="post"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-        >
+        <form name="contact" netlify onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact v1" />
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
             Want to get in touch?
