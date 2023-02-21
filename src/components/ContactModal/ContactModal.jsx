@@ -40,7 +40,7 @@ export const ContactModal = () => {
             </label>
           </p>
           <p>
-            <button type="submit">Send</button>
+            <input type="submit" value="Submit" />
           </p>
         </form>
       ) : (
