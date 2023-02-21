@@ -27,6 +27,8 @@ export const ContactModal = () => {
           data-netlify="true"
           onSubmit="onSubmit"
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <p>
             <label>
               Your Name: <input type="text" name="name" />
