@@ -21,7 +21,12 @@ export const ContactModal = () => {
   return (
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {submit === false ? (
-        <form name="contact" method="POST" data-netlify="true">
+        <form
+          name="contact v1"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+        >
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
             Want to get in touch?
           </Typography>
