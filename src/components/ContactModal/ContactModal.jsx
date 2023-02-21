@@ -12,9 +12,14 @@ const slectionInputStyle = {
   marginTop: "5",
 };
 
+handleSubmit(event) {
+  alert('An essay was submitted: ' + this.state.value);
+  event.preventDefault();
+}
+
 export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
-  const handleSubmit = () => {
+  const handleClick = () => {
     setSubmit(true);
   };
 
@@ -23,91 +28,70 @@ export const ContactModal = () => {
       {submit === false ? (
         <form
           name="contact"
-          method="POST"
+          method="post"
           data-netlify="true"
-          onSubmit="onSubmit"
+          onSubmit="submit"
         >
-          <input type="hidden" netlify />
+          <input type="hidden" name="form-name" value="contact v1" />
+          <Typography variant="h4" style={{ paddingBottom: 20 }}>
+            Want to get in touch?
+          </Typography>
+          <label>
+            <Typography>First Name</Typography>
 
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" />
-            </label>
-          </p>
-          <p>
-            <input type="submit" value="Submit" />
-          </p>
+            <input style={textInputStyle} type="text" name="first-name" />
+          </label>
+          <label>
+            <Typography>Last Name</Typography>
+
+            <input style={textInputStyle} type="text" name="last-name" />
+          </label>
+          <label>
+            <Typography>Email</Typography>
+
+            <input style={textInputStyle} type="email" name="e-mail" />
+          </label>
+          <label style={{ marginTop: 10 }}>
+            <Typography>
+              Are you interested in learning more about one of the projects?
+            </Typography>
+
+            <select
+              style={{
+                width: "100%",
+                padding: "16px 20px",
+                border: "none",
+                borderRadius: "4px",
+                backgroundColor: "#f1f1f1",
+              }}
+              type="select"
+              name="project"
+            >
+              <option style={slectionInputStyle} value={"QuicKart"}>
+                QuicKart
+              </option>
+              <option style={slectionInputStyle} value={"SoftIQ"}>
+                SoftIQ
+              </option>
+              <option style={slectionInputStyle} value={"Lost Resident"}>
+                Lost Resident
+              </option>
+              <option style={slectionInputStyle} value={"Client Registrar"}>
+                Client Registrar
+              </option>
+            </select>
+          </label>
+          <Button
+            onClick={handleClick}
+            style={{ marginTop: 20 }}
+            variant="outlined"
+            type="submit"
+          >
+            Submit
+          </Button>
         </form>
+        
       ) : (
-        // <form
-        //   name="contact"
-        //   method="post"
-        //   data-netlify="true"
-        //   onSubmit="submit"
-        // >
-        //   <input type="hidden" name="form-name" value="contact v1" />
-        //   <Typography variant="h4" style={{ paddingBottom: 20 }}>
-        //     Want to get in touch?
-        //   </Typography>
-        //   <label>
-        //     <Typography>First Name</Typography>
-
-        //     <input style={textInputStyle} type="text" name="first-name" />
-        //   </label>
-        //   <label>
-        //     <Typography>Last Name</Typography>
-
-        //     <input style={textInputStyle} type="text" name="last-name" />
-        //   </label>
-        //   <label>
-        //     <Typography>Email</Typography>
-
-        //     <input style={textInputStyle} type="email" name="e-mail" />
-        //   </label>
-        //   <label style={{ marginTop: 10 }}>
-        //     <Typography>
-        //       Are you interested in learning more about one of the projects?
-        //     </Typography>
-
-        //     <select
-        //       style={{
-        //         width: "100%",
-        //         padding: "16px 20px",
-        //         border: "none",
-        //         borderRadius: "4px",
-        //         backgroundColor: "#f1f1f1",
-        //       }}
-        //       type="select"
-        //       name="project"
-        //     >
-        //       <option style={slectionInputStyle} value={"QuicKart"}>
-        //         QuicKart
-        //       </option>
-        //       <option style={slectionInputStyle} value={"SoftIQ"}>
-        //         SoftIQ
-        //       </option>
-        //       <option style={slectionInputStyle} value={"Lost Resident"}>
-        //         Lost Resident
-        //       </option>
-        //       <option style={slectionInputStyle} value={"Client Registrar"}>
-        //         Client Registrar
-        //       </option>
-        //     </select>
-        //   </label>
-        //   <Button
-        //     onClick={handleSubmit}
-        //     style={{ marginTop: 20 }}
-        //     variant="outlined"
-        //     type="submit"
-        //   >
-        //     Submit
-        //   </Button>
-        // </form>
         <div style={{ width: "100%" }}>
           <Typography
             sx={{
