@@ -68,14 +68,15 @@ export const ContactModal = () => {
             </option>
           </select>
           <button type="submit">
-            <Button
+            {/* <Button
               onClick={handleSubmit}
               style={{ marginTop: 20 }}
               variant="outlined"
               type="submit"
             >
               Submit
-            </Button>
+            </Button> */}
+            Submit
           </button>
         </form>
       ) : (
