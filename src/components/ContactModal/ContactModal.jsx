@@ -22,63 +22,92 @@ export const ContactModal = () => {
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {submit === false ? (
         <form name="contact" method="POST" data-netlify="true">
-          <Typography variant="h4" style={{ paddingBottom: 20 }}>
-            Want to get in touch?
-          </Typography>
-          <label for="fname">
-            <Typography>First Name</Typography>
-          </label>
-          <input style={textInputStyle} type="text" id="fname" name="contact" />
-          <label for="lname">
-            <Typography>Last Name</Typography>
-          </label>
-          <input style={textInputStyle} type="text" id="lname" name="contact" />
-          <label for="lname">
-            <Typography>Email</Typography>
-          </label>
-          <input style={textInputStyle} type="text" id="lname" name="contact" />
-          <label style={{ marginTop: 10 }} for="project">
-            <Typography>
-              Are you interested in learning more about one of the projects?
-            </Typography>
-          </label>
-          <select
-            style={{
-              width: "100%",
-              padding: "16px 20px",
-              border: "none",
-              borderRadius: "4px",
-              backgroundColor: "#f1f1f1",
-            }}
-            type="select"
-            id="project"
-            name="contact"
-          >
-            <option style={slectionInputStyle} value={"QuicKart"}>
-              QuicKart
-            </option>
-            <option style={slectionInputStyle} value={"SoftIQ"}>
-              SoftIQ
-            </option>
-            <option style={slectionInputStyle} value={"Lost Resident"}>
-              Lost Resident
-            </option>
-            <option style={slectionInputStyle} value={"Client Registrar"}>
-              Client Registrar
-            </option>
-          </select>
-          <button type="submit">
-            <Button
-              onClick={handleSubmit}
-              style={{ marginTop: 20 }}
-              variant="outlined"
-              type="submit"
-            >
-              Submit
-            </Button>
-          </button>
+          <p>
+            <label>
+              Your Name: <input type="text" name="name" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Role:{" "}
+              <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
         </form>
       ) : (
+        // <form name="contact" method="POST" data-netlify="true">
+        //   <Typography variant="h4" style={{ paddingBottom: 20 }}>
+        //     Want to get in touch?
+        //   </Typography>
+        //   <label for="fname">
+        //     <Typography>First Name</Typography>
+        //   </label>
+        //   <input style={textInputStyle} type="text" id="fname" name="contact" />
+        //   <label for="lname">
+        //     <Typography>Last Name</Typography>
+        //   </label>
+        //   <input style={textInputStyle} type="text" id="lname" name="contact" />
+        //   <label for="lname">
+        //     <Typography>Email</Typography>
+        //   </label>
+        //   <input style={textInputStyle} type="text" id="lname" name="contact" />
+        //   <label style={{ marginTop: 10 }} for="project">
+        //     <Typography>
+        //       Are you interested in learning more about one of the projects?
+        //     </Typography>
+        //   </label>
+        //   <select
+        //     style={{
+        //       width: "100%",
+        //       padding: "16px 20px",
+        //       border: "none",
+        //       borderRadius: "4px",
+        //       backgroundColor: "#f1f1f1",
+        //     }}
+        //     type="select"
+        //     id="project"
+        //     name="contact"
+        //   >
+        //     <option style={slectionInputStyle} value={"QuicKart"}>
+        //       QuicKart
+        //     </option>
+        //     <option style={slectionInputStyle} value={"SoftIQ"}>
+        //       SoftIQ
+        //     </option>
+        //     <option style={slectionInputStyle} value={"Lost Resident"}>
+        //       Lost Resident
+        //     </option>
+        //     <option style={slectionInputStyle} value={"Client Registrar"}>
+        //       Client Registrar
+        //     </option>
+        //   </select>
+        //   <button type="submit">
+        //     <Button
+        //       onClick={handleSubmit}
+        //       style={{ marginTop: 20 }}
+        //       variant="outlined"
+        //       type="submit"
+        //     >
+        //       Submit
+        //     </Button>
+        //   </button>
+        // </form>
         <div style={{ width: "100%" }}>
           <Typography
             sx={{
