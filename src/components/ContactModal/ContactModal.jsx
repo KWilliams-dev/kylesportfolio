@@ -30,7 +30,7 @@ export const ContactModal = () => {
           name="contact"
           method="post"
           data-netlify="true"
-          onSubmit="submit"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact v1" />
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
