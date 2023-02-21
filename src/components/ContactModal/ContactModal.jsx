@@ -28,7 +28,7 @@ export const ContactModal = () => {
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {submit === false ? (
         <form
-          name="contact"
+          name="contact v1"
           netlify
           onSubmit={(e) => {
             handleSubmit(e);
