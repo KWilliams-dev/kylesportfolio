@@ -12,13 +12,14 @@ const slectionInputStyle = {
   marginTop: "5",
 };
 
-const handleSubmit = (event) => {
-  alert("An essay was submitted: ");
-  event.preventDefault();
-};
-
 export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
+
+  const handleSubmit = (event) => {
+    alert("An essay was submitted: ");
+    event.preventDefault();
+  };
+
   const handleClick = () => {
     setSubmit(true);
   };
