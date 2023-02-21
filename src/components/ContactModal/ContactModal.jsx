@@ -28,15 +28,15 @@ export const ContactModal = () => {
           <label for="fname">
             <Typography>First Name</Typography>
           </label>
-          <input style={textInputStyle} type="text" id="fname" name="fname" />
+          <input style={textInputStyle} type="text" id="fname" name="contact" />
           <label for="lname">
             <Typography>Last Name</Typography>
           </label>
-          <input style={textInputStyle} type="text" id="lname" name="lname" />
+          <input style={textInputStyle} type="text" id="lname" name="contact" />
           <label for="lname">
             <Typography>Email</Typography>
           </label>
-          <input style={textInputStyle} type="text" id="lname" name="lname" />
+          <input style={textInputStyle} type="text" id="lname" name="contact" />
           <label style={{ marginTop: 10 }} for="project">
             <Typography>
               Are you interested in learning more about one of the projects?
@@ -52,7 +52,7 @@ export const ContactModal = () => {
             }}
             type="select"
             id="project"
-            name="project"
+            name="contact"
           >
             <option style={slectionInputStyle} value={"QuicKart"}>
               QuicKart
