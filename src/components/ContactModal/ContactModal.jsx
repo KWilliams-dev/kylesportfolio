@@ -80,7 +80,7 @@ export const ContactModal = () => {
             onClick={handleSubmit}
             style={{ marginTop: 20 }}
             variant="outlined"
-            type="button"
+            type="submit"
           >
             Submit
           </Button>
