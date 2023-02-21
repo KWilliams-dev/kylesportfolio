@@ -16,8 +16,8 @@ const quicKartInfo =
 
 const softIqInfo =
   "This apps goal is to help users sharpen their soft skills for interviews in tech. The user can select their " +
-  "level of interview expertise and receive questions wihtin their level of skill. Once the user has answered via recorded video, our app will detect improvements " +
-  "that could be made.";
+  "aspiring job type and receive questions based on that position. Once the user has answered via recorded video, our app will allow the user to make improvements " +
+  "as necessary.";
 
 const clientRegistrar =
   "The purpose is to demonstrate a basic example of full stack development. The backend is programmed using JDBC, " +
