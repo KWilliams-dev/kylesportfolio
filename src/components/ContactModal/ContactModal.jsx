@@ -12,10 +12,10 @@ const slectionInputStyle = {
   marginTop: "5",
 };
 
-handleSubmit(event) {
-  alert('An essay was submitted: ' + this.state.value);
+const handleSubmit = (event) => {
+  alert("An essay was submitted: " + this.state.value);
   event.preventDefault();
-}
+};
 
 export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
@@ -90,7 +90,6 @@ export const ContactModal = () => {
             Submit
           </Button>
         </form>
-        
       ) : (
         <div style={{ width: "100%" }}>
           <Typography
