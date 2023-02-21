@@ -34,19 +34,19 @@ export const ContactModal = () => {
           <label>
             <Typography>First Name</Typography>
 
-            <input style={textInputStyle} type="text" name="FirstName" />
+            <input style={textInputStyle} type="text" name="first-name" />
           </label>
           <label>
             <Typography>Last Name</Typography>
 
-            <input style={textInputStyle} type="text" name="LastName" />
+            <input style={textInputStyle} type="text" name="last-name" />
           </label>
           <label>
             <Typography>Email</Typography>
 
-            <input style={textInputStyle} type="email" name="Email" />
+            <input style={textInputStyle} type="email" name="e-mail" />
           </label>
-          <label style={{ marginTop: 10 }} for="project">
+          <label style={{ marginTop: 10 }}>
             <Typography>
               Are you interested in learning more about one of the projects?
             </Typography>
@@ -60,7 +60,7 @@ export const ContactModal = () => {
                 backgroundColor: "#f1f1f1",
               }}
               type="select"
-              name="Project"
+              name="project"
             >
               <option style={slectionInputStyle} value={"QuicKart"}>
                 QuicKart
