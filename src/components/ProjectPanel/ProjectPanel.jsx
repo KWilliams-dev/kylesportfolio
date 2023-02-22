@@ -58,13 +58,8 @@ export const ProjectPanel = ({
               })}
           </List>
         </CardContent>
-        <CardActions>
-          <div style={{ marginLeft: 10 }}>
-            <RequestCodeReviewButton />
-          </div>
-        </CardActions>
         <Stack
-          sx={{ paddingLeft: 2, paddingBottom: 2, paddingTop: 2 }}
+          sx={{ paddingLeft: 2, paddingBottom: 2 }}
           direction={"row"}
           spacing={1}
         >

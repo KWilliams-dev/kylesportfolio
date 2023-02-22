@@ -8,7 +8,6 @@ export const ProjectCard = ({ projectName, projectInfo }) => {
         <h2>{projectName}</h2>
         <p>{projectInfo}</p>
       </header>
-      <RequestCodeReviewButton />
     </div>
   );
 };

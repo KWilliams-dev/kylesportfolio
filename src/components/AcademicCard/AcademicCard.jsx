@@ -18,7 +18,7 @@ export const AcademicCard = () => {
         justifyContent: "center",
         width: "100%",
         height: "100%",
-        marginBottom: 5
+        marginBottom: 5,
       }}
     >
       <Card
@@ -42,7 +42,7 @@ export const AcademicCard = () => {
               "Major: Information Technology - Software Development Concentration"
             }
           </Typography>
-          
+
           <Typography sx={{ marginTop: 1 }} variant="h6">
             {"Awards: Presidents List, Deans List"}
           </Typography>
@@ -52,8 +52,9 @@ export const AcademicCard = () => {
           <Typography sx={{ marginTop: 2 }} variant="h6">
             GGC has offered me the opportunity to earn a B.S. that is largly
             focused in Software Devlopment. The curriculum for my concentration
-            has also enabled me to gain academic and proffesional experience in Agile
-            methodologies. As well as many different technologies, including:
+            has also enabled me to gain academic and proffesional experience in
+            Agile methodologies. As well as many different technologies,
+            including:
           </Typography>
           <Stack
             sx={{ paddingLeft: 2, paddingTop: 2 }}
@@ -72,9 +73,6 @@ export const AcademicCard = () => {
             <Chip label="CSS" />
           </Stack>
         </CardContent>
-        <CardActions>
-          <Button>Contact Me</Button>
-        </CardActions>
       </Card>
     </Box>
   );
