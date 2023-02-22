@@ -14,11 +14,29 @@ const slectionInputStyle = {
 
 export const ContactModal = () => {
   const [submit, setSubmit] = useState(false);
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [comments, setComments] = useState("");
+  const [project, setProject] = useState("QuicKart");
 
   const handleSubmit = (e) => {
-    console.log("An form was submitted: ");
     e.preventDefault();
-    e.submit();
+    const contact = {
+      fname,
+      lname,
+      email,
+      comments,
+      project,
+    };
+
+    fetch("https://kyle-williams-dev-portfolio.com/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(contact),
+    }).then(() => {
+      console.log("New contact added");
+    });
   };
 
   const handleClick = () => {
@@ -32,7 +50,7 @@ export const ContactModal = () => {
           name="contact v1"
           method="post"
           data-netlify="true"
-          onSubmit="submit"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact v1" />
           <Typography variant="h4" style={{ paddingBottom: 20 }}>
@@ -40,24 +58,58 @@ export const ContactModal = () => {
           </Typography>
           <label>
             <Typography>First Name</Typography>
-
-            <input style={textInputStyle} type="text" name="first-name" />
+            <input
+              style={textInputStyle}
+              type="text"
+              required
+              name="first-name"
+              value={fname}
+              onChange={(e) => {
+                setFname(e.target.value);
+              }}
+            />
           </label>
           <label>
             <Typography>Last Name</Typography>
-
-            <input style={textInputStyle} type="text" name="last-name" />
+            <input
+              style={textInputStyle}
+              type="text"
+              name="last-name"
+              required
+              value={lname}
+              onChange={(e) => {
+                setLname(e.target.value);
+              }}
+            />
           </label>
           <label>
             <Typography>Email</Typography>
-
-            <input style={textInputStyle} type="email" name="e-mail" />
+            <input
+              style={textInputStyle}
+              type="email"
+              name="e-mail"
+              required
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+          </label>
+          <label>
+            <Typography>Comments</Typography>
+            <textarea
+              style={textInputStyle}
+              name="e-mail"
+              value={comments}
+              onChange={(e) => {
+                setComments(e.target.value);
+              }}
+            ></textarea>
           </label>
           <label style={{ marginTop: 10 }}>
             <Typography>
               Are you interested in learning more about one of the projects?
             </Typography>
-
             <select
               style={{
                 width: "100%",
@@ -68,6 +120,8 @@ export const ContactModal = () => {
               }}
               type="select"
               name="project"
+              value={project}
+              onChange={(e) => setProject(e.target.value)}
             >
               <option style={slectionInputStyle} value={"QuicKart"}>
                 QuicKart
