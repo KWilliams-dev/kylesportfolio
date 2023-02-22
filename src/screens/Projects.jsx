@@ -1,4 +1,3 @@
-import { Box, List, ListItem } from "@mui/material";
 import { ProjectPanel } from "../components/ProjectPanel/ProjectPanel";
 import interview from "../assets/interview.jpg";
 import cart from "../assets/cart.jpg";

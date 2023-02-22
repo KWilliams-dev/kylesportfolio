@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Nav } from "./components/Nav/Nav";
 import { Routes, Route } from "react-router-dom";
 import { Academics } from "./screens/Academics";

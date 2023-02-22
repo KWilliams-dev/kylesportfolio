@@ -1,9 +1,5 @@
-import { Box, Typography, Button } from "@mui/material";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillCopyrightCircle,
-} from "react-icons/ai";
+import { Box, Typography } from "@mui/material";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 export const ContactModal = () => {

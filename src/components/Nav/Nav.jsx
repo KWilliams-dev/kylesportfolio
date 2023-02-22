@@ -1,28 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { style } from "../RequestCodeReview/RequestCodeReviewButton";
-import { Tabs, Tab, Box, Typography } from "@mui/material";
-import { useRef, useState } from "react";
-import SendIcon from "@mui/icons-material/Send";
-import HomeIcon from "@mui/icons-material/Home";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import SchoolIcon from "@mui/icons-material/School";
-import InfoIcon from "@mui/icons-material/Info";
+import { Box } from "@mui/material";
+import { useState } from "react";
 import Modal from "@mui/material/Modal";
 import { ContactModal } from "../ContactModal/ContactModal";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import kyleImg from "../../assets/kyle.jpg";
-
-const pages = ["Home", "Projects", "Contact", "Academics", "About"];
 
 export const Nav = () => {
   const [open, setOpen] = useState(false);

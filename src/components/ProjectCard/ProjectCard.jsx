@@ -1,5 +1,4 @@
 import "./ProjectCard.css";
-import { RequestCodeReviewButton } from "../RequestCodeReview/RequestCodeReviewButton";
 
 export const ProjectCard = ({ projectName, projectInfo }) => {
   return (
