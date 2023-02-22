@@ -29,14 +29,6 @@ export const ContactModal = () => {
       comments,
       project,
     };
-
-    fetch("https://kyle-williams-dev-portfolio.com/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(contact),
-    }).then(() => {
-      console.log("New contact added");
-    });
   };
 
   const handleClick = () => {
