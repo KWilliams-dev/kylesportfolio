@@ -36,7 +36,10 @@ function App() {
         <Nav />
         <section className="card-list">
           <ProjectCard projectName="QuicKart" projectInfo={quicKartInfo} />
-          <ProjectCard projectName="SoftIQ" projectInfo={softIqInfo} />
+          <ProjectCard
+            projectName="SoftIQ (In Development)"
+            projectInfo={softIqInfo}
+          />
           <ProjectCard
             projectName="Lost Resident"
             projectInfo={lostResidence}

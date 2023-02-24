@@ -72,7 +72,7 @@ export const Projects = () => {
       </Fade>
       <ProjectPanel
         image={interview}
-        title="SoftIQ"
+        title="SoftIQ (In Development)"
         info={softIqInfo}
         technologies={softIqTechnologies}
         listOfAccomplishments={listOfAccomplishmentsSoftIQ}
