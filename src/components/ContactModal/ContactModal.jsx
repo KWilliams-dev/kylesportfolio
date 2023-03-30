@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 
 const textInputStyle = {
@@ -13,100 +13,100 @@ const slectionInputStyle = {
 };
 
 export const ContactModal = () => {
-  const [submit, setSubmit] = useState(false);
-
-  const handleSubmit = (e) => {
-    console.log("An form was submitted: ");
-    e.preventDefault();
-    e.submit();
-  };
-
-  const handleClick = () => {
-    setSubmit(true);
-  };
+  const [input, setInput] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    project: "",
+  });
 
   return (
     <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-      {submit === false ? (
-        <form
-          name="contact v1"
-          method="post"
-          data-netlify="true"
-          onSubmit="submit"
-        >
-          <input type="hidden" name="form-name" value="contact v1" />
-          <Typography variant="h4" style={{ paddingBottom: 20 }}>
-            Want to get in touch?
-          </Typography>
-          <label>
-            <Typography>First Name</Typography>
+      <form name="contact" method="post">
+        <input type="hidden" name="form-name" value="contact" />
+        <Typography variant="h4" style={{ paddingBottom: 20 }}>
+          Want to get in touch?
+        </Typography>
+        <label>
+          <Typography>First Name</Typography>
 
-            <input style={textInputStyle} type="text" name="first-name" />
-          </label>
-          <label>
-            <Typography>Last Name</Typography>
-
-            <input style={textInputStyle} type="text" name="last-name" />
-          </label>
-          <label>
-            <Typography>Email</Typography>
-
-            <input style={textInputStyle} type="email" name="e-mail" />
-          </label>
-          <label style={{ marginTop: 10 }}>
-            <Typography>
-              Are you interested in learning more about one of the projects?
-            </Typography>
-
-            <select
-              style={{
-                width: "100%",
-                padding: "16px 20px",
-                border: "none",
-                borderRadius: "4px",
-                backgroundColor: "#f1f1f1",
-              }}
-              type="select"
-              name="project"
-            >
-              <option style={slectionInputStyle} value={"QuicKart"}>
-                QuicKart
-              </option>
-              <option style={slectionInputStyle} value={"SoftIQ"}>
-                SoftIQ
-              </option>
-              <option style={slectionInputStyle} value={"Lost Resident"}>
-                Lost Resident
-              </option>
-              <option style={slectionInputStyle} value={"Client Registrar"}>
-                Client Registrar
-              </option>
-            </select>
-          </label>
-          <input type="submit" value="Submit" />
-          {/* <Button
-            onClick={handleClick}
-            style={{ marginTop: 20 }}
-            variant="outlined"
-            type="submit"
-          >
-            Submit
-          </Button> */}
-        </form>
-      ) : (
-        <div style={{ width: "100%" }}>
-          <Typography
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
+          <input
+            value={input.firstName}
+            style={textInputStyle}
+            type="text"
+            name="firstName"
+            onChange={(e) => {
+              setInput({ ...input, firstName: e.target.value });
             }}
-            variant="h4"
-          >
-            Thank you!
+          />
+        </label>
+        <label>
+          <Typography>Last Name</Typography>
+
+          <input
+            value={input.lastName}
+            style={textInputStyle}
+            type="text"
+            name="lastName"
+            onChange={(e) => {
+              setInput({ ...input, lastName: e.target.value });
+            }}
+          />
+        </label>
+        <label>
+          <Typography>Email</Typography>
+
+          <input
+            value={input.email}
+            style={textInputStyle}
+            type="email"
+            name="email"
+            onChange={(e) => {
+              setInput({ ...input, email: e.target.value });
+            }}
+          />
+        </label>
+        <label style={{ marginTop: 10 }}>
+          <Typography>
+            Are you interested in learning more about one of the projects?
           </Typography>
-        </div>
-      )}
+
+          <select
+            style={{
+              width: "100%",
+              padding: "16px 20px",
+              border: "none",
+              borderRadius: "4px",
+              backgroundColor: "#f1f1f1",
+            }}
+            type="select"
+            name="project"
+            value={input.project}
+            onChange={(e) => {
+              setInput({ ...input, project: e.target.value });
+            }}
+          >
+            <option style={slectionInputStyle} value={"QuicKart"}>
+              QuicKart
+            </option>
+            <option style={slectionInputStyle} value={"SoftIQ"}>
+              SoftIQ
+            </option>
+            <option style={slectionInputStyle} value={"Lost Resident"}>
+              Lost Resident
+            </option>
+            <option style={slectionInputStyle} value={"Client Registrar"}>
+              Client Registrar
+            </option>
+          </select>
+        </label>
+        <button
+          type="submit"
+          className="w-1/2 mx-auto mt-[25px] p-2 bg-neutral-800 text-white rounded-lg"
+        >
+          Submit
+        </button>
+      </form>
     </Box>
   );
 };
